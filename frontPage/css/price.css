@@ -1,0 +1,227 @@
+body{
+}
+
+.wx-container{
+
+}
+
+.tab-content .tab-pane{
+	display: none;
+}
+.tab-content .active{
+	display: block;
+}
+.wx-container .package{
+	background: #eee;
+	color: #666;
+    background-color: #e5e5e5;
+}
+.wx-container .package a{
+	color: #666;
+}
+.wx-container .package .nav-tabs {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height: 40px;
+	line-height: 40px;
+}
+.wx-container .package .nav-tabs li a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.wx-container .package .nav-tabs li{
+	float: left;	
+	width: 120px;
+	text-align: center;
+}
+.wx-container .package .nav-tabs li.active{
+	color: #59708B;
+    background-color: #f6f6f6;
+}
+.wx-container .package .nav-tabs li a{
+	color: #59708B;
+}
+.wx-container .package .nav-tabs li.active a{
+	color: #59708B;
+	font-weight: 600;
+}
+
+.wx-container .package .tab-content{
+	clear: both;
+	background: #f6f6f6;
+	padding: 7px;
+}
+
+.wx-container .package .wxp-link{
+	display: block;
+	width: 250px;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    text-decoration: none;
+    float: left;
+    margin-right:30px;
+    height: 330px;
+}
+
+.wx-container .package .wxp-link h2{
+	color: #59708B;
+}
+.wx-container .package .wxp-link .wxp-header p{
+	margin: 0;
+	padding: 0;
+	line-height: 25px;
+}
+.wx-container .package .wxp-link .wxp-header{
+	padding-bottom: 10px;
+}
+.wx-container .package .wxp-link .wxp-header .new-price{
+	font-size: 14px;
+
+}
+.wx-container .package .wxp-link .wxp-header .new-price .price{
+	font-size: 22px;
+}
+.wx-container .package .wxp-link .wxp-header .old-price{
+	font-size: 12px;
+	color: #aaa;
+}
+.wx-container .package .wxp-link .wxp-header .old-price .price{
+	text-decoration: line-through;
+}
+.wx-container .package .wxp-bd {
+	border-top: 1px solid #eee;
+}
+.wx-container .package .wxp-link .wxp-header .discount-wrap{
+	background-color: #ff3c00;
+	color: #fff;
+	border-radius: 3px;
+	padding: 1px 2px;
+}
+
+.wx-container .package .wxp-link:hover, .wx-container .package .checked{
+	border-color: #52acd9;
+}
+
+.wx-container .package .wxp-link .wxp-header h2 {
+	padding: 0;
+	margin: 0;
+	line-height: 50px;
+}
+.wx-container .package .checked .wxp-header{
+	background-color: #52acd9;
+	color: #fff;
+}
+.wx-container .package .checked .wxp-header h2,.wx-container .package .checked .wxp-header .old-price{
+	color: #fff;
+}
+.package-op{
+	text-align: center;
+	margin-top: 25px;
+}
+.package-op .btn{
+	border: 1px solid #1089ce;
+    background-color: #1089ce;
+	font-size: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    width: 140px;
+    height: 34px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff !important;
+}
+.package-op .btn-group{
+	padding-bottom: 10px;
+}
+.package-op span{
+	color: #1089ce;
+}
+.wx-descpic{
+	border: 1px solid #f1f1f1;
+	margin-top: 30px;
+}
+.wx-descpic img{
+	width: 1162px;
+}
+.wx-descpic .desc-content{
+	display: none;
+}
+.wx-descpic .active{
+	display: block;
+}
+
+.process-official-promises {
+	width: 1164px;
+	margin: 40px auto;
+	font-family: Microsoft YaHei;
+}
+.process-official-promises .title {
+	height: 50px;
+	background: #63abd6;
+	font-weight: bold;
+	padding: 0 20px;
+}
+.process-official-promises .title h3 {
+	font-weight: 800;
+	font-size: 24px;
+	color: #fff;
+	margin: 10px 0;
+	float: left;
+}
+.process-official-promises .title h3 i {
+	height: 25px;
+	vertical-align: -4px;
+	margin-right: 8px;
+	background: #fff;
+	width: 3px;
+	display: inline-block;
+}
+.process-official-promises .title ul {
+	margin-right: 90px;
+	font-size: 16px;
+	float: right;
+	margin: 16px 0 0;
+}
+.process-official-promises .title ul li {
+	list-style: none;
+	float: left;
+	padding-left: 30px;
+	height: 30px;
+	background: #63abd6;
+	background: url(../assets/packages/package_tit.png) no-repeat;
+	margin-left: 36px;
+	line-height: 30px;
+	color: #fff;
+}
+.process-official-promises .title ul .xgbz {
+	background-position: 0 -33px;
+}
+.process-official-promises .title ul .bzlc {
+	background-position: 0 -68px;
+}
+.process-official-promises .acceptance {
+	border: 1px solid #f1f1f1;
+	padding-left: 20px;
+	font-size: 14px;
+}
+.process-official-promises .acceptance dl {
+	margin-bottom: 20px;
+}
+.process-official-promises .acceptance dl dt {
+	float: left;
+	display: inline-block;
+	color: #63abd6;
+}
+.process-official-promises .acceptance dl dd {
+	color: #666;
+	margin-left: 0;
+	display: inline-block;
+}
+.process-official-promises .acceptance dl dd span {
+	color: #ff9300;
+	font-weight: 800;
+}
