@@ -154,7 +154,7 @@
                                             <div style="clear: both;"></div>
                                             <div class="modal-body">
                                                 <div style="width: 20%;float: left;">联系手机号:        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                                                <div style="width: 80%;float: right;"><input type="text" value="" id="appletContactPhone"></div>
+                                                <div style="width: 80%;float: right;"><input type="text" value="" id="appletContactPhone" style="width: 87%;"></div>
                                             </div>
                                             <div style="clear: both;"></div>
 
@@ -272,7 +272,7 @@
                                                 <div style="clear: both;"></div>
                                                 <div class="modal-body">
                                                     <div style="width: 20%;float: left;">联系手机号:        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                                                    <div style="width: 80%;float: right;"><input type="text" value="" id="publicContactPhone"></div>
+                                                    <div style="width: 80%;float: right;"><input type="text" value="" id="publicContactPhone" style="width: 87%;"></div>
                                                 </div>
                                                 <div style="clear: both;"></div>
 
@@ -331,7 +331,7 @@
                                                 <div style="clear: both;"></div>
                                                 <div class="modal-body">
                                                     <div style="width: 20%;float: left;">联系手机号:        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                                                    <div style="width: 80%;float: right;"><input type="text" value="" id="shopContactPhone"></div>
+                                                    <div style="width: 80%;float: right;"><input type="text" value="" id="shopContactPhone" style="width: 87%;"></div>
                                                 </div>
                                                 <div style="clear: both;"></div>
 
@@ -451,6 +451,10 @@
      * @returns {string}
      */
     function commitRequirement(typeValue, requirementDescription, contactPhone) {
+        if ("" == typeValue){
+            alert("请选择套餐！");
+            return;
+        }
         var requestJson = "{\"type\":\"" + typeValue + "\",\"phone\":\"" + contactPhone + "\", \"content\":\"" + requirementDescription + "\"}";
         $.ajax({
             type: 'PUT',
@@ -459,6 +463,7 @@
             data: requestJson,
             success: function(data){
                 alert("提交成功，我们会很快联系您！");
+                location.reload();
             },
             error: function(data){
                 alert("提交失败");
