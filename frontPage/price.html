@@ -455,6 +455,14 @@
             alert("请选择套餐！");
             return;
         }
+        if ("" == requirementDescription){
+            alert("请填写详细需求！");
+            return;
+        }
+        if ("" == contactPhone){
+            alert("请填写手机号");
+            return;
+        }
         var requestJson = "{\"type\":\"" + typeValue + "\",\"phone\":\"" + contactPhone + "\", \"content\":\"" + requirementDescription + "\"}";
         $.ajax({
             type: 'PUT',
