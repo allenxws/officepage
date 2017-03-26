@@ -22,3 +22,5 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+/.mvn
+/catalina.home_IS_UNDEFINED
