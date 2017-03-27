@@ -19,7 +19,7 @@ public class RequirementController extends BaseController {
 	@Autowired
 	RequirementService requirementService;
 
-	@RequestMapping(value = "add", method = RequestMethod.PUT)
+	@RequestMapping(value = "/add", method = RequestMethod.PUT)
 	public CommonResponse add(@RequestBody AddRequirementRequest addRequirementRequest) {
 		return requirementService.add(addRequirementRequest);
 	}
