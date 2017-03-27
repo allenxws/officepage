@@ -463,6 +463,10 @@
             alert("请填写手机号");
             return;
         }
+        if (!checkPhone(contactPhone)){
+            alert('请输入有效的手机号码！');
+            return;
+        }
         var requestJson = "{\"type\":\"" + typeValue + "\",\"phone\":\"" + contactPhone + "\", \"content\":\"" + requirementDescription + "\"}";
         $.ajax({
             type: 'PUT',
@@ -477,6 +481,15 @@
                 alert("提交失败");
             }
         });
+    }
+
+    function checkPhone(phone) {
+        var phoneRegular = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        if(!phoneRegular.test(phone))
+        {
+            return false;
+        }
+        return true;
     }
 
 

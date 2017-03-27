@@ -3,12 +3,14 @@ package com.officepage.requirement.controller;
 import com.officepage.TestAppConfig;
 import com.officepage.common.service.JsonService;
 import com.officepage.requirement.request.AddRequirementRequest;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by xuwushun on 2017/3/27.
  */
+@Ignore
 public class RequirementControllerTest extends TestAppConfig {
 	@Autowired
 	JsonService jsonService;
