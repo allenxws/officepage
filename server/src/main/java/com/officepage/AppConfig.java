@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,5 +33,20 @@ public class AppConfig {
 			logger.debug("get message properties error", e1);
 		}
 		return properties;
+	}
+
+	@Bean
+	public JavaMailSenderImpl mailClient() {
+		JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
+		javaMailSender.setHost("smtp.qq.com");
+		javaMailSender.setProtocol("smtp");
+		javaMailSender.setUsername("1471132931@qq.com");
+		javaMailSender.setPassword("xwtidjohqudwfghd");
+		Properties properties = new Properties();
+		properties.put("mail.smtp.auth", true);
+		properties.put("mail.smtp.starttls.enable", true);
+		properties.put("mail.smtp.timeout", 5000);
+		javaMailSender.setJavaMailProperties(properties);
+		return javaMailSender;
 	}
 }
