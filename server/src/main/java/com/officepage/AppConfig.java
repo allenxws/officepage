@@ -38,14 +38,16 @@ public class AppConfig {
 	@Bean
 	public JavaMailSenderImpl mailClient() {
 		JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
-		javaMailSender.setHost("smtp.qq.com");
-		javaMailSender.setProtocol("smtp");
 		javaMailSender.setUsername("1471132931@qq.com");
 		javaMailSender.setPassword("xwtidjohqudwfghd");
 		Properties properties = new Properties();
-		properties.put("mail.smtp.auth", true);
-		properties.put("mail.smtp.starttls.enable", true);
-		properties.put("mail.smtp.timeout", 5000);
+		properties.setProperty("mail.smtp.host", "smtp.qq.com");
+		properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+		properties.setProperty("mail.smtp.socketFactory.fallback", "false");
+		properties.setProperty("mail.smtp.port", "465");
+		properties.setProperty("mail.smtp.socketFactory.port", "465");
+		properties.setProperty("mail.smtp.timeout", "2000");
+		properties.setProperty("mail.smtp.auth", "true");
 		javaMailSender.setJavaMailProperties(properties);
 		return javaMailSender;
 	}

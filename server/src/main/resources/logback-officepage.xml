@@ -10,7 +10,7 @@
             </encoder>
         </appender>
         <logger name="com.officepage" level="debug"/>
-        <root level="info">
+        <root level="debug">
             <appender-ref ref="console"/>
         </root>
     </springProfile>
@@ -26,7 +26,7 @@
                 <pattern>${pattern}</pattern>
             </layout>
         </appender>
-        <root level="info">
+        <root level="debug">
             <appender-ref ref="productFile"/>
         </root>
     </springProfile>
